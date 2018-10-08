@@ -14,9 +14,6 @@ const Header = props => {
               <Link to="/" className="nav-link">Timeline</Link>
             </li>
             <li className="nav-item">
-              <Link to="/profile" className="nav-link">Profile</Link>
-            </li>
-            <li className="nav-item">
               <Link to="/friends" className="nav-link">Friends</Link>
             </li>
             <li className="nav-item">
