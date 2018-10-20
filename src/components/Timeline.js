@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import {Consumer} from '../context';
-import AddComment from './AddComment';
+import AddComment from './comments/AddComment';
+import Comments from './comments/Comments';
 
 class Timeline extends Component {
 
   render() {
     return (
-      <AddComment />
+      <div>
+        <AddComment />
+        <Comments />
+      </div>
     )
   }
 }

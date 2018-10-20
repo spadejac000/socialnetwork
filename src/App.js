@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Friends from './components/Friends';
-import Header from './components/Header';
+import Friends from './components/friends/Friends';
+import Header from './components/layout/Header';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {Provider} from './context';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,7 +8,7 @@ import './App.css';
 import About from './components/pages/About';
 import Timeline from './components/Timeline';
 import Profile from './components/pages/Profile';
-import Photos from './components/pages/Photos';
+import Photos from './components/pages/photos/Photos';
 
 class App extends Component {
   render() {

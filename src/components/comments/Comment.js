@@ -1,33 +1,33 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {Consumer} from '../context';
+import {Consumer} from '../../context';
 
-
-class Friend extends Component {
+class Comment extends Component {
 
   onDeleteClick = (id, dispatch) => {
     dispatch({
-      type: 'DELETE_FRIEND',
+      type: 'DELETE_COMMENT',
       payload: id
     });
   }
 
   render() {
-    const {id, name} = this.props.friend;
-    return (
+    const {body, name} = this.props.comment;
+    return(
       <Consumer>
         {value => {
           const {dispatch} = value;
           return (
             <div className="card card-body mb-3">
-              <h4>{name} 
+              <h4>{name}
                 <span 
                   style={{cursor: 'pointer', float: 'right', color: 'grey', fontSize: '.5em' }} 
-                  onClick={this.onDeleteClick.bind(this, id, dispatch)}
+                  onClick={this.onDeleteClick.bind(this, dispatch)}
                 >
                   Remove
                 </span>
               </h4>
+              <p>{body}</p>
             </div>
           )
         }}
@@ -36,8 +36,4 @@ class Friend extends Component {
   }
 }
 
-Friend.propTypes = {
-  friend: PropTypes.object.isRequired,
-}
-
-export default Friend;
+export default Comment;
