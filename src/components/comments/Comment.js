@@ -12,21 +12,21 @@ class Comment extends Component {
   }
 
   render() {
-    const {body, name} = this.props.comment;
+    const {body, name, comment} = this.props.comment;
     return(
       <Consumer>
         {value => {
           const {dispatch} = value;
           return (
             <div className="card card-body mb-3">
-              <h4>{name}
+              <p>{comment}
                 <span 
                   style={{cursor: 'pointer', float: 'right', color: 'grey', fontSize: '.5em' }} 
                   onClick={this.onDeleteClick.bind(this, dispatch)}
                 >
                   Remove
                 </span>
-              </h4>
+              </p>
               <p>{body}</p>
             </div>
           )

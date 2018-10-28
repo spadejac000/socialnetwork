@@ -13,7 +13,7 @@ class Photo extends Component {
   }
 
   render() {
-    const {id, url} = this.props.photo;
+    const {id, thumbnailUrl} = this.props.photo;
     return (
       <Consumer>
         {value => {
@@ -23,14 +23,14 @@ class Photo extends Component {
               className="card card-body mb-3" 
               style={{marginLeft: '.5em', marginRight: '.5em'}}
             >
-              <img src={url}>
+              <img src={thumbnailUrl}></img>
                 <span 
                   style={{cursor: 'pointer', float: 'right', color: 'grey', fontSize: '.5em' }} 
                   onClick={this.onDeleteClick.bind(this, id, dispatch)}
                 >
                   Remove
                 </span>
-              </img>
+              
             </div>
           )
         }}

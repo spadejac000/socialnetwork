@@ -11,6 +11,7 @@ class AddComment extends Component {
 
   onSubmit = (dispatch, e) => {
     e.preventDefault();
+    console.log(this.state)
     const {comment} = this.state;
 
     const newComment = {

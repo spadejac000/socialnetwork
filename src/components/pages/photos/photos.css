@@ -1,0 +1,11 @@
+.photosLayout {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+@media(max-width: 600px) {
+  .photosLayout {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+}
