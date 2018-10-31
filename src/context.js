@@ -15,6 +15,26 @@ const reducer = (state, action) => {
         ...state,
         comments: [action.payload, ...state.comments]
       }
+    case 'DELETE_FRIEND':
+      return {
+        ...state,
+        friends: state.friends.filter(friend => friend.id !== action.payload)
+      }
+    case 'ADD_FRIEND':
+      return {
+        ...state,
+        friends: [action.payload, ...state.friends]
+      }
+    case 'DELETE_PHOTO':
+      return {
+        ...state,
+        photos: state.photos.filter(photo => photo.id !== action.payload)
+      }
+    case 'ADD_PHOTO':
+      return {
+        ...state,
+        photos: [action.payload, ...state.photos]
+      }
     default: 
       return state;
   }
@@ -35,13 +55,10 @@ export class Provider extends Component {
       axios.get('https://jsonplaceholder.typicode.com/posts'),
       axios.get('http://jsonplaceholder.typicode.com/photos?albumId=1')
     ])
-      .then(res => this.setState({friends: res[0].data, comments: res[1].data, photos: res[2].data}))
+      .then(res => {
+        this.setState({friends: res[0].data, comments: res[1].data.slice(0, 2), photos: res[2].data.slice(0, 14)})
+      })
   }
-
-  // componentDidMount() {
-  //   axios.get('https://jsonplaceholder.typicode.com/posts')
-  //     .then(res => this.setState({comments: res.data}))
-  // }
 
   render() {
     return (

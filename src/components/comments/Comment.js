@@ -12,7 +12,7 @@ class Comment extends Component {
   }
 
   render() {
-    const {body, name, comment} = this.props.comment;
+    const {body, name, comment, id} = this.props.comment;
     return(
       <Consumer>
         {value => {
@@ -22,7 +22,7 @@ class Comment extends Component {
               <p>{comment}
                 <span 
                   style={{cursor: 'pointer', float: 'right', color: 'grey', fontSize: '.5em' }} 
-                  onClick={this.onDeleteClick.bind(this, dispatch)}
+                  onClick={this.onDeleteClick.bind(this, id, dispatch)}
                 >
                   Remove
                 </span>
