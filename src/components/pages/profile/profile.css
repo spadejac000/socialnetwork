@@ -1,0 +1,75 @@
+/* Profile Header */
+
+.profile-header {
+  position: relative;
+  background-image: url('https://www.riu.com/en/binaris/Playa_cancun_1_tcm55-190704.jpg?v=tm131217_1322');
+  height: 25em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -16px;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+/* Profile Picture */
+
+.profile-picture {
+  width: 15em;
+  height: 15em;
+  z-index: 1;
+  margin-left: 2em;
+  position: absolute;
+  top: 12em;
+  left: 3em;
+}
+
+/* Profile Menu */
+
+nav.profileMenuNavbar {
+  border-style: solid;
+  border-color: rgba(0,0,0,.125);
+  border-width: 1px;
+}
+
+nav.profileMenuNavbar ul {
+  display: flex;
+  margin-bottom: 0px;
+}
+
+nav.profileMenuNavbar ul {
+  list-style-type: none;
+  justify-content: center;
+}
+
+nav.profileMenuNavbar ul li a {
+  text-decoration: none!important;
+}
+
+nav.profileMenuNavbar li {
+  text-align: center;
+  padding: 1em;
+}
+
+nav.profileMenuNavbar li:hover {
+  background-color: #424242;
+}
+
+nav.profileMenuNavbar li:active {
+  background-color: #424242!important;
+}
+
+nav.profileMenuNavbar ul li a:hover {
+  color: white;
+}
+
+/* Post Menu Navbar */
+
+nav.postMenuNavbar ul {
+  list-style-type: none;
+  justify-content: flex-start;
+}
+
+.post {
+  border-bottom-left-radius: calc(0.25rem - 1px)!important;
+  border-bottom-right-radius: calc(0.25rem - 1px)!important;
+}

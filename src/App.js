@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import About from './components/pages/About';
 import Timeline from './components/Timeline';
-import Profile from './components/pages/Profile';
+import Profile from './components/pages/profile/Profile';
 import Photos from './components/pages/photos/Photos';
 
 class App extends Component {

@@ -22,9 +22,6 @@ const Header = props => {
             <li className="nav-item">
               <Link to="/photos" className="nav-link">Photos</Link>
             </li>
-            <li className="nav-item">
-              <Link to="/about" className="nav-link">About</Link>
-            </li>
           </ul>
         </div>
       </div>
